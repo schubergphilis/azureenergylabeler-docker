@@ -28,7 +28,7 @@ env:
   REGISTRY: ghcr.io
   DOCKERFILE_DIR: azureenergylabeler
   # github.repository_owner as <account>, for this repo is schubergphilis
-  IMAGE_NAME: ${{ github.repository_owner }}/${{ env.DOCKERFILE_DIR }}
+  IMAGE_NAME: ${{ github.repository_owner }}/azureenergylabeler
 
 jobs:
   docker:
