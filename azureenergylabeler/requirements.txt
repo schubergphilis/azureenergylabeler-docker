@@ -1,1 +1,1 @@
-azureenergylabelercli==1.0.0
+azureenergylabelercli==1.0.1
