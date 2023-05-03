@@ -72,3 +72,20 @@ The Service Principal therefore must have `Security Reader` permission assigned 
 |`AZURE_TENANT_ID`|id of the application's Azure Active Directory tenant
 |`AZURE_CLIENT_CERTIFICATE_PATH`|path to a PEM or PKCS12 certificate file including private key
 |`AZURE_CLIENT_CERTIFICATE_PASSWORD`|password of the certificate file, if any
+
+## Container signature
+All container in this repository are signed and their signature can be verified against the following public key:
+
+#### **cosign.pub**
+```bash
+-----BEGIN PUBLIC KEY-----
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE0KAPZzcYGAtXaruQNbFiGTiy058c
+OMNVzxDVRQSE6lDIB3MCayVdUcyy8b2OmJZ7TYBYLCuEAlFWxVVLMMJ7Cg==
+-----END PUBLIC KEY-----
+```
+
+Manually verification can be performed by issuing:
+
+```bash
+cosign verify --key cosign.pub <IMAGE_NAME>
+```
